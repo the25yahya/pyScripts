@@ -46,16 +46,16 @@ def perform_action(process, action):
         'suspend': process.suspend,
         'resume': process.resume,
         'info': lambda: print(f"""
-            -PROCESS ID: {process.pid}
-            -PROCESS NAME: {process.name()}
-            -PROCESS STATUS: {process.status()}
-            -PROCESS EXECUTABLE: {process.exe()}
-            -PROCESS CMDLINE: {process.cmdline()}
-            -PROCESS PARENT: {process.parent()}
-            -MEMORY INFORMATION: {process.memory_info()}
-            -OPEN FILES: {process.open_files()}
-            -NUMBER OF THREADS: {process.num_threads()}
-            -PROCESS THREADS: {process.threads()}
+            -\033[91m\033[1mPROCESS ID\033[0m: {process.pid}
+            -\033[91m\033[1mPROCESS NAME\033[0m: {process.name()}
+            -\033[91m\033[1mPROCESS STATUS\033[0m: {process.status()}
+            -\033[91m\033[1mPROCESS EXECUTABLE\033[0m: {process.exe()}
+            -\033[91m\033[1mPROCESS CMDLINE\033[0m: {process.cmdline()}
+            -\033[91m\033[1mPROCESS PARENT\033[0m: {process.parent()}
+            -\033[91m\033[1mMEMORY INFORMATION\033[0m: {process.memory_info()}
+            -\033[91m\033[1mOPEN FILES\033[0m: {process.open_files()}
+            -\033[91m\033[1mNUMBER OF THREADS\033[0m: {process.num_threads()}
+            -\033[91m\033[1mPROCESS THREADS\033[0m: {process.threads()}
         """)
     }
     try:
