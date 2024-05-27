@@ -1,2 +1,13 @@
-numers= [1,2,3,4,5]
-print(*numers, sep="&")
+#class dog():
+    #def __init__(self, name):
+   #     self.name = name
+  #      pass
+  #  def speak(self):
+ #      print(f"hello im {self.name}")
+    
+    
+#tim = dog("tim").speak()
+
+x = (1,2)
+y = enumerate(x)
+print(y)

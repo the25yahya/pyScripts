@@ -1,4 +1,4 @@
-#Write a script that allows users to view and manage running processes on their system. Users should be able to list all processes, kill specific processes by name or PID, and view detailed information about individual processes. This script should use platform-specific modules like psutil on Linux and wmi on Windows.
+#a script that allows users to view and manage running processes on their system. Users can list all processes, kill specific processes by name or PID, and view detailed information about individual processes.
 import psutil
 
 def list_processes():
