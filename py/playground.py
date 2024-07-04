@@ -1,9 +1,16 @@
-import re
+from sys import argv
 
-string = r"08hsc80HVMEUF  9038450    U |||\{\}}{)_%(#)@+!%*)$!)^josdmgk:d b+-/FFHJJI;       idk      abc    $ #"
+script , file = argv 
 
-pattern = r"[A-Z]"
+def read_all(f):
+    print(f.read())
 
-uppercase_letters = re.findall(pattern, string)
+def rewind(f):
+    f.seek(0)
+    
+def print_a_line(line_count, f):
+    print(line_count, f.readline())
 
-print(uppercase_letters)
+
+current_file = open(file)
+
